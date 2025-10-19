@@ -1,46 +1,43 @@
 @extends('layout.master')
 
 @section('content')
-    <h1 class="h3 mb-4 text-gray-800">Data Buku</h1>
+<h1 class="h3 mb-4 text-gray-800">Data Buku</h1>
 
 <a href="#" class="btn btn-primary mb-3" data-toggle="modal" data-target="#tambahBukuModal">+ Tambah Buku</a>
 
-    <table class="table table-bordered">
-        <thead class="thead-dark">
-            <tr>
-                <th>No</th>
-                <th>Judul Buku</th>
-                <th>Penulis</th>
-                <th>Penerbit</th>
-                <th>Tahun Terbit</th>
-                <th>Aksi</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Laskar Pelangi</td>
-                <td>Andrea Hirata</td>
-                <td>Bentang Pustaka</td>
-                <td>2005</td>
-                <td>
-                    <button class="btn btn-warning btn-sm">Edit</button>
-                    <button class="btn btn-danger btn-sm">Hapus</button>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Bumi Manusia</td>
-                <td>Pramoedya Ananta Toer</td>
-                <td>Lentera Dipantara</td>
-                <td>1980</td>
-                <td>
-                    <button class="btn btn-warning btn-sm">Edit</button>
-                    <button class="btn btn-danger btn-sm">Hapus</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div class="row">
+    <!-- Buku 1 -->
+    <div class="col-md-3 mb-4">
+        <div class="card shadow">
+            <img src="{{ asset('img/laskar.jpg') }}" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;" alt="Laskar Pelangi">
+            <div class="card-body">
+                <h5 class="card-title">Laskar Pelangi</h5>
+                <p class="card-text">Penulis: Andrea Hirata</p>
+                <p class="card-text">Penerbit: Bentang Pustaka</p>
+                <p class="card-text">Tahun: 2005</p>
+                <button class="btn btn-warning btn-sm">Edit</button>
+                <button class="btn btn-danger btn-sm">Hapus</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buku 2 -->
+    <div class="col-md-3 mb-4">
+        <div class="card shadow">
+            <img src="{{ asset('img/bumi.jpg') }}" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;" alt="Bumi Manusia">
+            <div class="card-body">
+                <h5 class="card-title">Bumi Manusia</h5>
+                <p class="card-text">Penulis: Pramoedya Ananta Toer</p>
+                <p class="card-text">Penerbit: Lentera Dipantara</p>
+                <p class="card-text">Tahun: 1980</p>
+                <button class="btn btn-warning btn-sm">Edit</button>
+                <button class="btn btn-danger btn-sm">Hapus</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Tambah Buku -->
 <div class="modal fade" id="tambahBukuModal" tabindex="-1" role="dialog" aria-labelledby="tambahBukuLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -60,5 +57,4 @@
     </div>
   </div>
 </div>
-
 @endsection
