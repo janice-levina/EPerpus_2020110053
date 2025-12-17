@@ -20,7 +20,7 @@
 
     <!-- Data Buku -->
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('buku-anggota') }}">
+        <a class="nav-link" href="{{ route('buku.anggota') }}">
             <i class="fas fa-fw fa-book"></i>
             <span>Data Buku</span>
         </a>
@@ -44,7 +44,7 @@
 
     <!-- Laporan -->
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('laporan-anggota') }}">
+<a class="nav-link" href="{{ route('laporan.anggota') }}">
             <i class="fas fa-fw fa-file-alt"></i>
             <span>Laporan</span>
         </a>
